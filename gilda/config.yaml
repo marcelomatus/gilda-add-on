@@ -9,6 +9,5 @@ arch:
   - amd64
   - i386
 
-startup: services
 ports:
   5012/tcp: 5012
