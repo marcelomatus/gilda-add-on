@@ -24,7 +24,7 @@
 ARG os_version=debian
 ARG os_minor=bookworm
 
-ARG BUILD_ARG
+ARG BUILD_ARCH
 
 FROM ghcr.io/home-assistant/$BUILD_ARCH-base-$os_version:$os_minor AS base
 
