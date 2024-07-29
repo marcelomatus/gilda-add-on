@@ -1,20 +1,14 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Example add-on
+name: "Gilda Opts HA add-on"
+description: "Gilda Opts HA add-on. Implements an EMS in HA."
+url: "https://github.com/marcelomatus/gilda-add-on"
 version: "1.2.0"
-slug: example
-description: Example add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+slug: "gilda"
+init: false
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
   - i386
-init: false
-map:
-  - share:rw
-options:
-  message: "Hello world..."
-schema:
-  message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+
+startup: services
+ports:
+  5012/tcp: 5012
