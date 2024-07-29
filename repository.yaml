@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: Gilda_opts Home Assistant add-on repository
-url: 'https://github.com/marcelomatus/gilda-add-on'
-maintainer: Awesome Maintainer <marcelomatusacuna@gmail.com>
+url: 'https://github.com/marcelomatus/gilda-add-on.git'
+maintainer: Marcelo Matus <marcelomatusacuna@gmail.com>
