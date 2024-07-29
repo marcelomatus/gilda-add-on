@@ -1,7 +1,7 @@
 name: "Gilda Opts HA add-on"
 version: "1.2.0"
 slug: "gilda"
-description: "Gilda Opts HA add-on. Implements an EMS in HA."
+description: "Gilda Opts addon. Provides the Gilda optimizer server"
 url: "https://github.com/marcelomatus/gilda-add-on"
 init: false
 arch:
