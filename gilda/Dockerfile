@@ -19,18 +19,14 @@
 # Setting the base image and build arch
 #---------------------------------------
 
-
 # ARG os_version=ubuntu
 # ARG os_minor=20.04
 ARG os_version=debian
 ARG os_minor=bookworm
 
-FROM ghcr.io/home-assistant/$TARGETARCH-base-$os_version:$os_minor AS base
+ARG BUILD_ARG
 
-#check if TARGETARCH was passed by build-arg
-ARG TARGETARCH
-ENV TARGETARCH=${TARGETARCH:?}
-
+FROM ghcr.io/home-assistant/$BUILD_ARCH-base-$os_version:$os_minor AS base
 
 #---------------------------------
 # Copying gilda-opts requirements and more
@@ -70,7 +66,7 @@ FROM base AS addon
 LABEL \
     io.hass.name="gilda-opts" \
     io.hass.description="GILDA-OPTS: Energy Management System" \
-    io.hass.version="1.0" \
+    io.hass.version="1.2" \
     io.hass.type="addon" \
     io.hass.arch="aarch64|amd64|armhf|armv7"
 

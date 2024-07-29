@@ -3,20 +3,12 @@ version: "1.2.0"
 slug: "gilda"
 description: "Gilda Opts HA add-on. Implements an EMS in HA."
 url: "https://github.com/marcelomatus/gilda-add-on"
+init: false
 arch:
   - aarch64
   - amd64
   - i386
-init: false
 
 ports:
   5012/tcp: 5012
-
-map:
-  - share:rw
-options:
-  message: "Hello world from gilda..."
-schema:
-  message: "str?"
-image: "repo/{arch}-gilda-opts"
 
