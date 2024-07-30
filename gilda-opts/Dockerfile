@@ -7,7 +7,7 @@
 #   docker build --no-cache -t local/gilda-addon .
 #
 # To  run
-#   docker run --name gilda -p 5012:5012 --rm  -it local/gilda-addon
+#   docker run --name gilda-opts -p 5012:5012 --rm  -it local/gilda-addon
 #
 # To test
 #   curl -s -X POST -H "Content-Type: application/json" -d @system.json  http://127.0.0.1:5012/optimize

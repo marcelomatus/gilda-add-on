@@ -2,7 +2,7 @@
 
 ## How to use
 
-This add-on provides `gilda_opts` optimizer as a service.
+This add-on provides the `gilda_opts` optimizer as a web service.
 
 When started, the optimize service will be available in the `GILDAOPTS_ADDR` (5012).
 
