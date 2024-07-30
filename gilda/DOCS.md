@@ -1,8 +1,8 @@
-# Home Assistant Add-on: Gilda add-on
+# Home Assistant Add-on: Gilda-opts add-on
 
 ## How to use
 
-This addon provides `gilda_opts` optimizer as a service.
+This add-on provides `gilda_opts` optimizer as a service.
 
 When started, the optimize service will be available in the `GILDAOPTS_ADDR` (5012).
 

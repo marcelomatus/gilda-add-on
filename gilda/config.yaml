@@ -7,7 +7,8 @@ init: false
 arch:
   - aarch64
   - amd64
-  - i386
+  - armhf
+  - armv7
 
 ports:
   5012/tcp: 5012

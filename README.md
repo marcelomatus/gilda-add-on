@@ -1,4 +1,4 @@
-# Gilda-opts Home Assistant addon repository
+# Gilda-opts Home Assistant add-on repository
 
 This repository provides .
 
