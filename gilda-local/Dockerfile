@@ -24,7 +24,7 @@
 ARG os_version=debian
 ARG os_minor=bookworm
 
-ARG BUILD_ARCH
+ARG BUILD_ARCH=amd64
 
 FROM ghcr.io/home-assistant/$BUILD_ARCH-base-$os_version:$os_minor AS base
 
@@ -45,7 +45,11 @@ ARG pip_args=--break-system-packages  --no-cache-dir
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+    git gcc make cmake libssl-dev \
+    libmariadb3 \
+    libmariadb-dev \
     python3 \
+    python3-dev \
     python3-pip \
     && \
     apt-get clean && \
