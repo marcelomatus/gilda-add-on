@@ -1,0 +1,2 @@
+gilda_local@git+https://github.com/marcelomatus/gilda-local.git
+

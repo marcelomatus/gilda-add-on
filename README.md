@@ -1,4 +1,4 @@
-# Gilda-opts Home Assistant add-on repository
+# Gilda Home Assistant add-ons repository
 
 This repository provides `Gilda` (Gestor Inteligente y Local de Demanda
 Asociativa) add-ons.
@@ -8,9 +8,10 @@ Asociativa) add-ons.
 
 ## Add-ons
 
-This repository contains the following add-ons.
+This Gilda repository contains the following add-ons.
 
-### [Gilda-opts add-on](./gilda-opts) 
+### [Gilda-opts add-on](./gilda-opts) The `gilda-opts` optimizer as a local server instance.
+### [Gilda-local add-on](./gilda-local) The `gilda-local` local server instance.
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
@@ -23,4 +24,5 @@ This repository contains the following add-ons.
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+
 
