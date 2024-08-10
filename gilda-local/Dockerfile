@@ -4,13 +4,13 @@
 
 #
 # To build
-#   docker build --no-cache -t local/gilda-addon .
+#   docker build --no-cache -t local/gilda-local-addon .
 #
 # To  run
-#   docker run --name gilda-local -p 5012:5012 --rm  -it local/gilda-addon
+#   docker run --name gilda-local -p 5024:5024 --rm  -it local/gilda-local-addon
 #
 # To test
-#   curl -s -X POST -H "Content-Type: application/json" -d @system.json  http://127.0.0.1:5012/optimize
+#   curl -s -X POST -H "Content-Type: application/json" -d @system.json  http://127.0.0.1:5024/optimize
 #
 # where the system.json is a JSON input file system descriptor.
 #
