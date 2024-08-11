@@ -55,7 +55,7 @@ RUN apt-get update \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ARG CACHEBUST=6
+ARG CACHEBUST=7
 RUN echo "$CACHEBUST"
 
 # disable the cache if there is a new commit
