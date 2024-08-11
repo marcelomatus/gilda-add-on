@@ -55,8 +55,9 @@ RUN apt-get update \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ARG CACHEBUST=5
+ARG CACHEBUST=6
 RUN echo "$CACHEBUST"
+
 # disable the cache if there is a new commit
 ADD "https://api.github.com/repos/marcelomatus/gilda-add-on/commits?per_page=1" latest_commit_addon
 ADD "https://api.github.com/repos/marcelomatus/gilda-local/commits?per_page=1" latest_commit_local
