@@ -54,7 +54,7 @@ RUN apt-get update \
     rm -rf /var/lib/apt/lists/*
 
 # disable the cache if there is a new commit
-ADD "https://api.github.com/repos/marcelomatus/gilda-add-on/commits?per_page=1" latest_commit
+ADD "https://api.github.com/repos/marcelomatus/gilda-opts/commits?per_page=1" latest_commit
 
 RUN pip3 install $pip_args --upgrade  pip && \
     pip3 install $pip_args -r requirements.txt
