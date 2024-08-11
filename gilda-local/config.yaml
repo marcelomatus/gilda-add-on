@@ -1,5 +1,5 @@
 name: "Gilda Local HA add-on"
-version: "1.5.9"
+version: "1.6.0"
 slug: "gilda-local"
 description: "Gilda Local addon. Provides the Gilda local server"
 url: "https://github.com/marcelomatus/gilda-add-on/gilda-local"
