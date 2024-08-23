@@ -55,12 +55,9 @@ RUN apt-get update \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ARG CACHEBUST=10
-RUN echo "$CACHEBUST"
-
 # disable the cache if there is a new commit
-ADD "https://api.github.com/repos/marcelomatus/gilda-add-on/commits?per_page=1" latest_commit_addon
-ADD "https://api.github.com/repos/marcelomatus/gilda-local/commits?per_page=1" latest_commit_local
+ARG CACHEBUST=11
+RUN echo "$CACHEBUST"
 
 RUN pip3 install $pip_args --upgrade  pip && \
     pip3 install $pip_args -r requirements.txt
@@ -79,10 +76,18 @@ LABEL \
     io.hass.type="addon" \
     io.hass.arch="aarch64|amd64|armhf|armv7"
 
-ENTRYPOINT [ "python3", "-m", "gilda_local.web_server"]
 
-#-------------------------
-# Closing the Docker
-#-------------------------
+# ENTRYPOINT [ "python3", "-m", "gilda_local.web_server"]
 
-FROM addon AS final
+
+# Python 3 HTTP Server serves the current working dir
+# So let's set it to our add-on persistent data directory.
+WORKDIR /data
+
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
+
+
